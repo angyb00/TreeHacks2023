@@ -7,8 +7,8 @@ function Input({ onAddApplication }) {
   const [status, setStatus] = useState('');
   const [isValid, setValid] = useState(false);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
     const application = { companyName: company, role, status };
     onAddApplication(application);
     setCompany('');
@@ -19,24 +19,24 @@ function Input({ onAddApplication }) {
     return company.length & role.length & status.length;
   }
   useEffect(() => {
-    const isValid = validate();
+    isValid = validate();
     setValid(isValid);
-  },[company, role, status]);
+  },[fname, lname]);
 
   return (
     <>
       <form className='form' onSubmit={handleSubmit}>
         <label>
           Company:
-          <input type="text" value={company} onChange={(event) => setCompany(event.target.value)} placeholder='Google!' />
+          <input type="text" value={company} onChange={(e) => setCompany(e.target.value)} placeholder='Google!' />
         </label>
         <label>
           Role:
-          <input type="text" value={role} onChange={(event) => setRole(event.target.value)} placeholder='SWE!' />
+          <input type="text" value={role} onChange={(e) => setRole(e.target.value)} placeholder='SWE!' />
         </label>
         <label>
           Status:
-          <input type="text" value={status} onChange={(event) => setStatus(event.target.value)} placeholder='Submitted!' />
+          <input type="text" value={status} onChange={(e) => setStatus(e.target.value)} placeholder='Submitted!' />
         </label>
         <div className='submitButton'>
           <button disabled = {!isValid} type='submit'>Submit</button>
