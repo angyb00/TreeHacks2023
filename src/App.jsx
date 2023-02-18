@@ -2,25 +2,20 @@ import { useState } from "react";
 import { useMutation, useQuery } from "../convex/_generated/react";
 import Header from './components/Header.jsx';
 import Input from './components/Input.jsx';
-
+import Companies from './components/Companies.jsx';
 
 export default function App() {
-  const messages = useQuery("listMessages") || [];
+  const [applications, setApplications] = useState([]);
 
-  const [newMessageText, setNewMessageText] = useState("");
-  const sendMessage = useMutation("sendMessage");
+  const handleAddCompany = (newCompany) => {
+    setApplications([...applications, newCompany]);
+  };
 
-  const [name] = useState(() => "User " + Math.floor(Math.random() * 10000));
-  async function handleSendMessage(event) {
-    event.preventDefault();
-    setNewMessageText("");
-    await sendMessage(newMessageText, name);
-  }
   return (
     <div>
-      <div><Header /></div>
-      <div><Input /></div>
+      <Header />
+      <Input onAddApplication={handleAddCompany} />
+      <Companies companies={applications} />
     </div>
-
   );
 }
