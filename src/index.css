@@ -24,6 +24,31 @@ h1 {
   font-size: 1.8em;
   font-weight: 500;
 }
+.grid{
+  margin-top:300px;
+  display: flex;
+  position: relative;
+  padding: 5px 0px 0;
+  height: 100%;
+  width: 100%;
+  border-left: 2px solid;
+}
+.bar{
+  width: 100%;
+  height: 50px;
+  margin: 30px;
+  background-color: blue;
+  color: blue;
+  border-radius: 3px 3px;
+}
+.x-axis{
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 5px;
+  text-align: center;
+  width: 100%;
+}
 
 .badge {
   text-align: center;
