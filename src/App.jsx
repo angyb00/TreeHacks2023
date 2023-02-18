@@ -37,6 +37,25 @@ export default function App() {
         />
         <input type="submit" value="Send" disabled={!newMessageText} />
       </form>
+      <div className = "grid"> 
+          <div className = "bar" > bar</div>
+          <div className = "bar" > bar</div>
+          <div className = "bar" > bar</div>
+          <div className = "bar" > bar</div>
+          <div className = "bar" > bar</div>
+          <div className = "bar" > bar</div>
+          <div className = "bar" > bar</div>
+      </div>
+
+      <div className ="x-axis"> 
+        <div className = "space-between">Monday</div>
+        <div className = "space-between">Tuesday</div>
+        <div className = "space-between">Wedensday</div>
+        <div className = "space-between">Thursday</div>
+        <div className = "space-between">Friday</div>
+        <div className = "space-between">Saturday</div>
+        <div className = "space-between">Sunday</div>
+      </div>
     </main>
   );
 }
