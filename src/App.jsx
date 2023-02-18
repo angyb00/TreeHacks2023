@@ -15,7 +15,7 @@ export default function App() {
   }
   return (
     <main>
-      <h1>Convex Chat</h1>
+      <h1>Alex's Chat</h1>
       <p className="badge">
         <span>{name}</span>
       </p>
