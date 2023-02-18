@@ -1,6 +1,6 @@
-# Convex tutorial
+# Internet
 
-You're just a few minutes away from having a webapp running locally powered by
-Convex.
+##Steps
 
-See the tutorial at [docs.convex.dev](https://docs.convex.dev) for instructions.
+1. _npm i_
+2. _npm run dev_ to run server
