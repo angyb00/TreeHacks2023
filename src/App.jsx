@@ -17,6 +17,7 @@ export default function App() {
     <main>
       <h1>Alex's Chat</h1>
       <p className="badge">
+        <p>Hello World</p>
         <span>{name}</span>
       </p>
       <ul>
